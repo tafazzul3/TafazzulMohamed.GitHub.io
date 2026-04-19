@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ==============================
+       PAGE TITLE — Change this!
+       ============================== -->
+  <title>Tafazzul Mohammed| Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader">
+    <div class="loader-text">
+      <!-- ==============================
+           LOADER INITIALS — Change to your initials
+           ============================== -->
+      <span class="loader-initials">T.M</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <!-- ==============================
+           NAV LOGO TEXT — Change to your name / brand
+           ============================== -->
+      <a href="#hero">Tafazzul Mohammed<span class="accent">.</span></a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-label fade-in-up delay-1">
+        <!-- ==============================
+             HERO BADGE TEXT — e.g., "Available for Internships"
+             ============================== -->
+        <span class="dot-pulse"></span> Available for Internships
+      </div>
+
+      <h1 class="hero-name fade-in-up delay-2">
+        <!-- ==============================
+             YOUR FULL NAME — Replace here
+             ============================== -->
+        Hello, I'm<br/><span class="name-highlight">Tafazzul Mohammed</span>
+      </h1>
+
+      <div class="hero-roles fade-in-up delay-3">
+        <!-- The JS typewriter will animate through these roles automatically -->
+        <span class="role-static">I build </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-desc fade-in-up delay-4">
+        <!-- ==============================
+             SHORT BIO (1–2 lines) — Edit this!
+             ============================== -->
+        Engineering student at <strong>Geethanjali College of Engineering & Technology</strong>,
+        passionate about solving real-world problems through clean code and thoughtful design.
+      </p>
+
+      <div class="hero-cta fade-in-up delay-5">
+        <!-- ==============================
+             RESUME LINK — Replace # with your Google Drive / PDF link
+             ============================== -->
+        <a href="#" class="btn-primary" target="_blank">
+          <i class="ri-download-2-line"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn-ghost">View Projects <i class="ri-arrow-right-line"></i></a>
+      </div>
+
+      <div class="hero-socials fade-in-up delay-5">
+        <!-- ==============================
+             SOCIAL LINKS — Replace # with your actual profile URLs
+             ============================== -->
+        <a href="#" target="_blank" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        <a href="#" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+        <a href="#" target="_blank" aria-label="Twitter/X"><i class="ri-twitter-x-fill"></i></a>
+        <a href="#" target="_blank" aria-label="LeetCode"><i class="ri-code-s-slash-line"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-in-up delay-3">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <!-- ==============================
+               YOUR PROFILE PHOTO — Replace 'your-photo.jpg' with actual file/URL
+               Or use a placeholder URL like https://i.pravatar.cc/300
+               ============================== -->
+          <img src="mta.jpeg" alt="Profile Photo" class="avatar-img" />
+        </div>
+        <div class="floating-badge badge-1"><i class="ri-code-s-slash-line"></i> CSE</div>
+        <div class="floating-badge badge-2"><i class="ri-medal-line"></i> 2026</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down">
+      <i class="ri-arrow-down-s-line"></i>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"> / About</span>
+        <h2 class="section-title">The Person<span class="accent">.</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            <!-- ==============================
+                 ABOUT PARAGRAPH 1 — Write your bio here
+                 ============================== -->
+            I'm a first-year Computer Science Engineering student with a deep interest in
+            <strong>Data Structures</strong>, <strong>Web Development</strong>, and
+            <strong>Problem Solving</strong>. I thrive at the intersection of logic and creativity.
+          </p>
+          <p>
+            <!-- ==============================
+                 ABOUT PARAGRAPH 2 — Hobbies / goals / personality
+                 ============================== -->
+            When I'm not debugging code, you'll find me exploring competitive programming,
+            reading about system design, or tinkering with UI ideas. I believe every line of code
+            tells a story — I try to make mine worth reading.
+          </p>
+
+          <div class="about-stats">
+            <!-- ==============================
+                 STATS — Update numbers as needed
+                 ============================== -->
+            <div class="stat-item">
+              <span class="stat-num" data-target="18">0</span>
+              <span class="stat-label">Lab Programs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="10">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="3">0</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards reveal">
+          <!-- ==============================
+               INTEREST CARDS — Edit or add more if needed
+               ============================== -->
+          <div class="interest-card">
+            <i class="ri-code-box-line"></i>
+            <h4>Web Dev</h4>
+            <p>Building responsive, accessible web interfaces</p>
+          </div>
+          <div class="interest-card">
+            <i class="ri-database-2-line"></i>
+            <h4>DSA</h4>
+            <p>Solving algorithmic problems efficiently</p>
+          </div>
+          <div class="interest-card">
+            <i class="ri-cpu-line"></i>
+            <h4>Systems</h4>
+            <p>Low-level programming & OS concepts</p>
+          </div>
+          <div class="interest-card">
+            <i class="ri-bar-chart-grouped-line"></i>
+            <h4>Data Science</h4>
+            <p>Exploring ML & data-driven solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"> / Skills</span>
+        <h2 class="section-title">My Toolkit<span class="accent">.</span></h2>
+      </div>
+
+      <div class="skills-grid reveal">
+
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <!-- ==============================
+                 LANGUAGES — Add / remove as needed
+                 ============================== -->
+            <span class="tag">C</span>
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Web</h3>
+          <div class="skill-tags">
+            <!-- ==============================
+                 WEB SKILLS — Edit as per your stack
+                 ============================== -->
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <!-- ==============================
+                 TOOLS — Edit as per your experience
+                 ============================== -->
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Linux</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Core CS</h3>
+          <div class="skill-tags">
+            <!-- ==============================
+                 CORE SUBJECTS — Edit as per your coursework
+                 ============================== -->
+            <span class="tag">Data Structures</span>
+            <span class="tag">OOP</span>
+            <span class="tag">OS</span>
+            <span class="tag">DBMS</span>
+            <span class="tag">Networks</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Proficiency Bars -->
+      <div class="proficiency reveal">
+        <h3 class="prof-title">Proficiency Levels</h3>
+        <div class="bar-list">
+          <!-- ==============================
+               PROFICIENCY BARS — Adjust data-width % and label
+               ============================== -->
+          <div class="bar-item">
+            <div class="bar-meta"><span>C / C++</span><span>90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>Data Structures</span><span>85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>Web Development</span><span>75%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-meta"><span>Python</span><span>70%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"> / Projects</span>
+        <h2 class="section-title">What I've Built<span class="accent">.</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ==============================
+             PROJECT CARD 1 — Fill in your project details
+             ============================== -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <i class="ri-folder-3-line project-icon"></i>
+            <div class="project-links">
+              <!-- Replace # with your GitHub repo link -->
+              <a href="#" target="_blank" aria-label="GitHub"><i class="ri-github-line"></i></a>
+              <!-- Replace # with live demo link (or remove if none) -->
+              <a href="#" target="_blank" aria-label="Live Demo"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+          <!-- PROJECT TITLE -->
+          <h3 class="project-title">Portfolio Website</h3>
+          <!-- PROJECT DESCRIPTION -->
+          <p class="project-desc">A responsive, modern personal portfolio built with HTML, CSS & JS featuring smooth animations and dark theme.</p>
+          <div class="project-tags">
+            <!-- TECH STACK USED -->
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <!-- ==============================
+             PROJECT CARD 2 — Fill in your project details
+             ============================== -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <i class="ri-folder-3-line project-icon"></i>
+            <div class="project-links">
+              <a href="#" target="_blank"><i class="ri-github-line"></i></a>
+              <a href="#" target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">DS Lab Programs</h3>
+          <p class="project-desc">Complete implementation of 18 Data Structures programs in C including Linked Lists, Stacks, Queues, Trees and Sorting algorithms.</p>
+          <div class="project-tags">
+            <span>C</span><span>Data Structures</span><span>Algorithms</span>
+          </div>
+        </div>
+
+        <!-- ==============================
+             PROJECT CARD 3 — Fill in your project details
+             ============================== -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <i class="ri-folder-3-line project-icon"></i>
+            <div class="project-links">
+              <a href="#" target="_blank"><i class="ri-github-line"></i></a>
+              <a href="#" target="_blank"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+          <!-- ==============================
+               YOUR 3rd PROJECT — Edit title, desc, tech
+               ============================== -->
+        <!--  <h3 class="project-title">Project Three Title</h3>
+          <p class="project-desc">Describe your project here. What problem does it solve? What did you learn building it?</p>
+          <div class="project-tags">
+            <span>Tech 1</span><span>Tech 2</span><span>Tech 3</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== EDUCATION SECTION ===================== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"> / Education</span>
+        <h2 class="section-title">My Journey<span class="accent">.</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- ==============================
+             TIMELINE ITEM 1 — Current / Latest education
+             ============================== -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2025 – 2029</span>
+            <h3>B.E. in Computer Science (AIML) & Engineering</h3>
+            <!-- COLLEGE NAME -->
+            <p class="timeline-inst">Geethanjali College of Engineering & Technology</p>
+            <!-- CGPA / PERCENTAGE — Update accordingly -->
+            <p class="timeline-detail">CGPA: <strong>7.9 (Current) / 10</strong></p>
+            <p class="timeline-detail">Relevant: Data Structures, OOP, DBMS, OS, Networks</p>
+          </div>
+        </div>
+
+        <!-- ==============================
+             TIMELINE ITEM 2 — Intermediate / 12th
+             ============================== -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023 – 2025</span>
+            <h3>Intermediate (MPC / BiPC)</h3>
+            <!-- SCHOOL / JUNIOR COLLEGE NAME -->
+            <p class="timeline-inst">Shaheen Junior College,MOINABAD</p>
+            <!-- MARKS / PERCENTAGE -->
+            <p class="timeline-detail">Percentage: <strong>97.7%</strong></p>
+          </div>
+        </div>
+
+        <!-- ==============================
+             TIMELINE ITEM 3 — 10th / SSC
+             ============================== -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2022 – 2023</span>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <!-- SCHOOL NAME -->
+            <p class="timeline-inst">St.John's High School,KARIMNAGAR</p>
+            <p class="timeline-detail">GPA: <strong>9.5</strong></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"> / Contact</span>
+        <h2 class="section-title">Let's Talk<span class="accent">.</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            <!-- ==============================
+                 CONTACT INTRO — Edit if needed
+                 ============================== -->
+            Whether it's an internship opportunity, a collab, or just a hello —
+            my inbox is always open.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <i class="ri-mail-line"></i>
+              <!-- ==============================
+                   YOUR EMAIL — Replace here
+                   ============================== -->
+              <a href="mailto:tafazzul.13a@email.com">tafazzul.13a@email.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="ri-phone-line"></i>
+              <!-- ==============================
+                   YOUR PHONE — Replace or remove
+                   ============================== -->
+              <a href="tel:+91 9951501168">+91 9951501168</a>
+            </div>
+            <div class="contact-item">
+              <i class="ri-map-pin-line"></i>
+              <!-- ==============================
+                   YOUR LOCATION — Replace here
+                   ============================== -->
+              <span>Hyderabad, Telangana, India</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <!-- ==============================
+                 SOCIAL LINKS (same as Hero) — Replace # with real URLs
+                 ============================== -->
+            <a href="#" target="_blank"><i class="ri-github-fill"></i></a>
+            <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+            <a href="#" target="_blank"><i class="ri-twitter-x-fill"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder=" "/>
+            <label for="name">Tafazzul Mohammed</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder=" "/>
+            <label for="email">Tafazzul.13a@email.com</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Message</label>
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            <i class="ri-send-plane-line"></i> Send Message
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>
+        <!-- ==============================
+             FOOTER NAME — Replace with your name
+             ============================== -->
+        Designed & Built by <span class="accent">Tafazzul Mohammed</span>
+      </p>
+      <p class="footer-year">© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
