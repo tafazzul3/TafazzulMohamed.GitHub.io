@@ -109,7 +109,7 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 
 .loader-initials {
   font-family: var(--font-head);
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 4px;
@@ -117,7 +117,7 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
   margin-bottom: 1rem;
 }
 .loader-bar {
-  width: 0; height: 2px;
+  width: 0; height: 4px;
   background: var(--accent);
   animation: loaderFill 1.4s var(--ease) forwards;
 }
@@ -144,7 +144,7 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 
 .nav-logo a {
   font-family: var(--font-head);
-  font-size: 1.6rem;
+  font-size: 2.1rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--text);
@@ -191,7 +191,7 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 
 /* ===================== HERO SECTION ===================== */
 .hero {
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -622,14 +622,9 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
-  align-items: stretch;
-  /* Override reveal stacking — grid controls layout, not flex/block */
-  opacity: 1 !important;
-  transform: none !important;
+  gap: 1.5rem;
 }
 
-/* Each card animates individually with a delay */
 .project-card {
   background: var(--bg);
   border: 1px solid var(--border);
@@ -637,24 +632,9 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s,
-              opacity 0.6s var(--ease);
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-/* Staggered entrance for each card */
-.project-card:nth-child(1) { animation: cardReveal 0.6s var(--ease) 0.1s forwards; }
-.project-card:nth-child(2) { animation: cardReveal 0.6s var(--ease) 0.25s forwards; }
-.project-card:nth-child(3) { animation: cardReveal 0.6s var(--ease) 0.4s forwards; }
-.project-card:nth-child(4) { animation: cardReveal 0.6s var(--ease) 0.55s forwards; }
-.project-card:nth-child(5) { animation: cardReveal 0.6s var(--ease) 0.7s forwards; }
-.project-card:nth-child(6) { animation: cardReveal 0.6s var(--ease) 0.85s forwards; }
-
-@keyframes cardReveal {
-  to { opacity: 1; transform: translateY(0); }
 }
 .project-card::before {
   content: '';
@@ -925,9 +905,8 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
 .footer-year { font-size: 0.75rem; }
 
 /* ===================== RESPONSIVE ===================== */
-
-/* Large desktop — keep 3-col projects */
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .hero { flex-direction: column; text-align: center; padding-top: calc(var(--nav-h) + 3rem); }
   .hero-content { max-width: 100%; }
   .hero-desc { margin: 0 auto 2rem; }
@@ -936,11 +915,6 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
   .hero-visual { order: -1; }
   .avatar-ring { width: 220px; height: 220px; }
   .about-grid { grid-template-columns: 1fr; }
-}
-
-/* Tablet — projects become 2 columns */
-@media (max-width: 900px) {
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -962,19 +936,13 @@ body:hover .cursor-dot, body:hover .cursor-outline { opacity: 1; }
   .hamburger { display: flex; }
 
   .skills-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .about-cards { grid-template-columns: 1fr 1fr; }
+  .about-cards { grid-template-columns: 1fr; }
   .about-stats { flex-wrap: wrap; gap: 1.5rem; }
   .footer-inner { flex-direction: column; text-align: center; }
 
   .cursor-dot, .cursor-outline { display: none; }
-}
-
-/* Mobile — everything single column */
-@media (max-width: 560px) {
-  .projects-grid { grid-template-columns: 1fr; }
-  .about-cards { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
